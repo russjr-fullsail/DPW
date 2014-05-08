@@ -40,4 +40,5 @@ elif info['number2'] <1:
 #limit number for cities to live
 if info['live'] >5:
     info['live'] = 5
-
+elif info['live'] <1:
+    info['live'] = 1
