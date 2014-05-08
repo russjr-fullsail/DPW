@@ -25,3 +25,6 @@ info['live'] = input('Enter a number between 1 and 5')
 info['float'] = float(input('cost of vehicle in decimal form (example 3.25)'))
 
 #Conditionals
+#limit number of vehicles
+if info['number'] > 4:
+    info['number'] = 4
