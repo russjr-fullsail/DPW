@@ -1,5 +1,4 @@
 __author__ = 'russjr'
-
 import webapp2
 
 class MainHandler(webapp2.RequestHandler):
@@ -10,10 +9,12 @@ class MainHandler(webapp2.RequestHandler):
         contact_button = Button()
         contact_button.label = "Contact Us"
         contact_button.show_label()
-        
+
 class Button(object):
     def __init__(self):
-        self.label = ""
+        self.label = "" #public attribute
+        self.__size = 60 #private attribute - two underscores
+        self._color = "0x0000" #protected attribute - one underscore
         #self.on_roll_over("Hello!!")
 
     def click(self):
