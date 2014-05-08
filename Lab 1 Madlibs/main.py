@@ -21,8 +21,8 @@ info['number'] = input('Enter a number of cars own between 1 and 4')
 info['number2'] = input('Enter a number between 1 and 50')
 #dream place to live
 info['live'] = input('Enter a number between 1 and 5')
-#find cost of vehicle -float
-info['float'] = float(input('cost of vehicle in decimal form (example 3.25)'))
+#find monthly income -float
+info['float'] = float(input('amount made per month (example 3.25)'))
 
 #Conditionals
 #limit number of vehicles
@@ -62,8 +62,8 @@ for vehicle in array:
 
 #calculating function
 def calc_price():
-    decimal - info['float']
-    dollar_amount = decimal * 1000000
+    decimal = info['float']
+    dollar_amount = decimal * 10
     return dollar_amount
 #initiate function
 calc_price = calc_price()
@@ -74,4 +74,10 @@ live = lives[(info['live']-1)]
 
 #Adding strings to message to create MadLib
 #Madlib to be printed
-message = '''I am the proud owner of a {info[vehicle]} that I drive around in my hometown of {info[city]}.  I would love to own a {info[dream]} and cruise around {info[number2]}.
+message = '''I am the proud owner of a {info[vehicle]} that I drive around in my hometown of {info[city]}.
+I currently own {info[number]} vehicles.  I would love to own a {info[dream]} and cruise around {live}.  One day I would like to own {info[number2]} vehicles.
+If I could make ${calc_price} a month, I could afford my  {info[dream]} and move to {live}.'''
+#formatting message
+messageFormatted = message.format(**locals())
+#printing formatted message
+print messageFormatted
