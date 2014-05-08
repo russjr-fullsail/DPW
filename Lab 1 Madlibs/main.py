@@ -53,3 +53,9 @@ array = []
 #loop array to add names to group
 for i in range(info['number']):
     array.append(str(car_owned[i]))
+
+#vehicle list
+vehicle_list = ""
+
+for vehicle in array:
+    vehicle_list = vehicle_list + vehicle + ", "
