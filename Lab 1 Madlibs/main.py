@@ -67,3 +67,7 @@ def calc_price():
     return dollar_amount
 #initiate function
 calc_price = calc_price()
+
+#dream place to live array
+lives =['New York City', 'San Fransisco', 'Orlando', 'Las Vegas', 'Nashville']
+live = lives[(info['live']-1)]
