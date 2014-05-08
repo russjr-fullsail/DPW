@@ -10,7 +10,7 @@ Lab 1 Madlibs
 info = dict()
 #variables that get inputted into story
 #string 1 vehicles
-info['vehicle'] = raw_input('Favorite Vehicle?')
+info['vehicle'] = raw_input('The car you own?')
 #string 2 hometown
 info['city'] = raw_input('What is your hometown?')
 #string 3 dream car
@@ -42,3 +42,8 @@ if info['live'] >5:
     info['live'] = 5
 elif info['live'] <1:
     info['live'] = 1
+
+#Array of vehicles
+car_owned = ['Jeep', 'Ford', 'Chevy', 'Dodge', 'BMW', 'Honda', 'Toyota', 'Kia', 'Mercedes']
+#append car own name to array
+car_owned.insert(0,str(info['vehicle']))
