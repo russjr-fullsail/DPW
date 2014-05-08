@@ -49,3 +49,7 @@ car_owned = ['Jeep', 'Ford', 'Chevy', 'Dodge', 'BMW', 'Honda', 'Toyota', 'Kia', 
 car_owned.insert(0,str(info['vehicle']))
 #Push vehicle into loop
 array = []
+
+#loop array to add names to group
+for i in range(info['number']):
+    array.append(str(car_owned[i]))
