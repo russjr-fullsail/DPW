@@ -26,11 +26,13 @@ info['float'] = float(input('cost of vehicle in decimal form (example 3.25)'))
 
 #Conditionals
 #limit number of vehicles
-if info['number'] > 4:
+if info['number'] >4:
     info['number'] = 4
-elif info['number'] < 1:
+elif info['number'] <1:
     info['number'] = 1
 
 #limiting random number
 if info['number2'] >50:
     info['number'] = 50
+elif info['number2'] <1:
+    info['number2'] = 1
