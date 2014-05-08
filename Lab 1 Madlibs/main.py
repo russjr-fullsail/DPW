@@ -59,3 +59,11 @@ vehicle_list = ""
 
 for vehicle in array:
     vehicle_list = vehicle_list + vehicle + ", "
+
+#calculating function
+def calc_price():
+    decimal - info['float']
+    dollar_amount = decimal * 1000000
+    return dollar_amount
+#initiate function
+calc_price = calc_price()
