@@ -36,3 +36,8 @@ if info['number2'] >50:
     info['number'] = 50
 elif info['number2'] <1:
     info['number2'] = 1
+
+#limit number for cities to live
+if info['live'] >5:
+    info['live'] = 5
+
