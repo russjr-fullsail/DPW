@@ -47,3 +47,5 @@ elif info['live'] <1:
 car_owned = ['Jeep', 'Ford', 'Chevy', 'Dodge', 'BMW', 'Honda', 'Toyota', 'Kia', 'Mercedes']
 #append car own name to array
 car_owned.insert(0,str(info['vehicle']))
+#Push vehicle into loop
+array = []
