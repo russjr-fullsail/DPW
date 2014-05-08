@@ -30,4 +30,7 @@ if info['number'] > 4:
     info['number'] = 4
 elif info['number'] < 1:
     info['number'] = 1
-    
+
+#limiting random number
+if info['number2'] >50:
+    info['number'] = 50
