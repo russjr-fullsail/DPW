@@ -21,7 +21,7 @@ info['number'] = input('Enter a number of cars own between 1 and 4')
 info['number2'] = input('Enter a number between 1 and 50')
 #dream place to live
 info['live'] = input('Enter a number between 1 and 5')
-#find monthly cost -float
+#find cost of vehicle -float
 info['float'] = float(input('cost of vehicle in decimal form (example 3.25)'))
 
 #Conditionals
@@ -71,3 +71,7 @@ calc_price = calc_price()
 #dream place to live array
 lives =['New York City', 'San Fransisco', 'Orlando', 'Las Vegas', 'Nashville']
 live = lives[(info['live']-1)]
+
+#Adding strings to message to create MadLib
+#Madlib to be printed
+message = '''I am the proud owner of a {info[vehicle]} that I drive around in my hometown of {info[city]}.  I would love to own a {info[dream]} and cruise around {info[number2]}.
