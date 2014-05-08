@@ -28,3 +28,6 @@ info['float'] = float(input('cost of vehicle in decimal form (example 3.25)'))
 #limit number of vehicles
 if info['number'] > 4:
     info['number'] = 4
+elif info['number'] < 1:
+    info['number'] = 1
+    
