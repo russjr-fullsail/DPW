@@ -7,16 +7,19 @@ import webapp2
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello world!')
+        p = Page()
+        self.response.write (p.print_out())
 
 class Page(object):
     def __init__(self):
         self.title = "Welcome!"
+        self.css = "css/style.css"
         self.head = """
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title></title>
+        <title>{self.title}</title>
+        <link href="{self.css}" rel="Stylesheet" type="text/css" />
     </head>
     <body>
         """
@@ -28,7 +31,9 @@ class Page(object):
         """
 
     def print_out(self):
-        return self.head + self.body + self.close
+        all = self.head + self.body + self.close
+        all = all.format(**locals())
+        return all
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
