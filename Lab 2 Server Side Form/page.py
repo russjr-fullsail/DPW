@@ -81,4 +81,7 @@ def __init__(self):
                 <div class="form-checkbox"><input type="checkbox" name="member" id="shelbygt500" value="shelbygt500" /><label for="shelbygt500"><img src="images/shelby_gt500.png" alt="Shelby GT500"/></label></div>
 
             <input type="submit" value="submit" />
-                    
+        </form>
+        self.closer = '''
+    </body>
+</html>
