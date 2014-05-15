@@ -56,3 +56,8 @@ def __init__(self):
 				<option value="29">29</option>
 				<option value="30">30</option>
 				<option value="31">31</option>
+            </select>
+            <label> Sex: </label>
+            <div id="radio">
+            <input type="radio" name="sex" value="male" id="male">
+            <label for="male">Male</label>
