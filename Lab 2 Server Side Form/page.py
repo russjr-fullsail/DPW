@@ -68,3 +68,4 @@ def __init__(self):
             <label for="member">Please vote for your favorite vehicle</label>
 
             <div class="form-checkbox"><input type="checkbox" name="member" id="jeep" value="jeep" /><label for="jeep"><img src="images/jeep.png" alt="Jeep Rubicon"/></label></div>
+            <div class="form-checkbox"><input type="checkbox" name="member" id="1963chevytruck" value="1963chevytruck" /><label for="1963chevytruck"><img src="images/1963_chevy_truck.png" alt="1963 Chevy Truck"/></label></div>
