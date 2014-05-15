@@ -74,4 +74,4 @@ def __init__(self):
             <div class="form-checkbox"><input type="checkbox" name="member" id="1973roadrunner" value="1973roadrunner" /><label for="1973roadrunner"><img src="images/1973_roadrunner.png" alt="1973 Roadrunner"/></label></div>
             <div class="form-checkbox"><input type="checkbox" name="member" id="chevycamaro" value="chevycamaro" /><label for="chevycamaro"><img src="images/chevy_camaro.png" alt="Chevy Camaro"/></label></div>
             <div class="form-checkbox"><input type="checkbox" name="member" id="chevytahoe" value="chevytahoe" /><label for="chevytahoe"><img src="images/chevy_tahoe.png" alt="Chevy Tahoe"/></label></div>
-            
+            <div class="form-checkbox"><input type="checkbox" name="member" id="dodgecharger" value="dodgecharger" /><label for="dodgecharge"><img src="images/dodge_charger.png" alt="Dodge Charger"/></label></div>
