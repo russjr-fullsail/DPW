@@ -19,4 +19,6 @@ def __init__(self):
        '''
 		self.registration = form = '''
 
-
+        <form method="GET" action="">
+        	<label for="fName">First name:</label> <input type="text" name="fName" id="fName" />
+        	<label for="lName">Last name:</label><input type="text" name="lName" id="lName"/>
