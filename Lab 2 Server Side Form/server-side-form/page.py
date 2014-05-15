@@ -125,7 +125,7 @@ class Page():
                 <div class="form-checkbox"><input type="checkbox" name="member" id="fordraptor" value=" 2011 Ford Raptor" /><label for="fordraptor"><img src="images/ford_raptor.png" alt="Ford Raptor"/></label></div>
                 <div class="form-checkbox"><input type="checkbox" name="member" id="shelbygt500" value=" 2014 Shelby GT500" /><label for="shelbygt500"><img src="images/shelby_gt500.png" alt="Shelby GT500"/></label></div>
 
-            <input type="submit" value="submit" />
+            <input type="submit" value="Submit" />
         </form>'''
 		self.closer = '''
     </body>
