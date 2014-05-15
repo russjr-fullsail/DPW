@@ -67,15 +67,18 @@ def __init__(self):
 
             <label for="member">Please vote for your favorite vehicle</label>
 
-            <div class="form-checkbox"><input type="checkbox" name="member" id="jeep" value="jeep" /><label for="jeep"><img src="images/jeep.png" alt="Jeep Rubicon"/></label></div>
-            <div class="form-checkbox"><input type="checkbox" name="member" id="1963chevytruck" value="1963chevytruck" /><label for="1963chevytruck"><img src="images/1963_chevy_truck.png" alt="1963 Chevy Truck"/></label></div>
-            <div class="form-checkbox"><input type="checkbox" name="member" id="1968shelbycobra" value="1968shelbycobra" /><label for="1968shelbycobra"><img src="images/1968_shelby_cobra.png" alt="1968 Shelby Cobra"/></label></div>
-            <div class="form-checkbox"><input type="checkbox" name="member" id="1970oldsmobile442" value="1970oldsmobile442" /><label for="1970oldsmobile442"><img src="images/1070_oldsmobile_442.png" alt="1070 Oldsmobile 442"/></label></div>
-            <div class="form-checkbox"><input type="checkbox" name="member" id="1973roadrunner" value="1973roadrunner" /><label for="1973roadrunner"><img src="images/1973_roadrunner.png" alt="1973 Roadrunner"/></label></div>
-            <div class="form-checkbox"><input type="checkbox" name="member" id="chevycamaro" value="chevycamaro" /><label for="chevycamaro"><img src="images/chevy_camaro.png" alt="Chevy Camaro"/></label></div>
-            <div class="form-checkbox"><input type="checkbox" name="member" id="chevytahoe" value="chevytahoe" /><label for="chevytahoe"><img src="images/chevy_tahoe.png" alt="Chevy Tahoe"/></label></div>
-            <div class="form-checkbox"><input type="checkbox" name="member" id="dodgecharger" value="dodgecharger" /><label for="dodgecharger"><img src="images/dodge_charger.png" alt="Dodge Charger"/></label></div>
-            <div class="form-checkbox"><input type="checkbox" name="member" id="fordraptor" value="fordraptor" /><label for="fordraptor"><img src="images/ford_raptor.png" alt="Ford Raptor"/></label></div>
-            <div class="form-checkbox"><input type="checkbox" name="member" id="dodgeram" value="dodgeram" /><label for="dodgeram"><img src="images/dodge_ram.png" alt="Dodge Ram"/></label></div>
-            <div class="form-checkbox"><input type="checkbox" name="member" id="fordmustang" value="fordmustang" /><label for="fordmustang"><img src="images/ford_mustang.png" alt="Ford Mustang"/></label></div>
-            <div class="form-checkbox"><input type="checkbox" name="member" id="shelbygt500" value="shelbygt500" /><label for="shelbygt500"><img src="images/shelby_gt500.png" alt="Shelby GT500"/></label></div>
+                <div class="form-checkbox"><input type="checkbox" name="member" id="jeep" value="jeep" /><label for="jeep"><img src="images/jeep.png" alt="Jeep Rubicon"/></label></div>
+                <div class="form-checkbox"><input type="checkbox" name="member" id="1963chevytruck" value="1963chevytruck" /><label for="1963chevytruck"><img src="images/1963_chevy_truck.png" alt="1963 Chevy Truck"/></label></div>
+                <div class="form-checkbox"><input type="checkbox" name="member" id="1968shelbycobra" value="1968shelbycobra" /><label for="1968shelbycobra"><img src="images/1968_shelby_cobra.png" alt="1968 Shelby Cobra"/></label></div>
+                <div class="form-checkbox"><input type="checkbox" name="member" id="1970oldsmobile442" value="1970oldsmobile442" /><label for="1970oldsmobile442"><img src="images/1070_oldsmobile_442.png" alt="1070 Oldsmobile 442"/></label></div>
+                <div class="form-checkbox"><input type="checkbox" name="member" id="1973roadrunner" value="1973roadrunner" /><label for="1973roadrunner"><img src="images/1973_roadrunner.png" alt="1973 Roadrunner"/></label></div>
+                <div class="form-checkbox"><input type="checkbox" name="member" id="chevycamaro" value="chevycamaro" /><label for="chevycamaro"><img src="images/chevy_camaro.png" alt="Chevy Camaro"/></label></div>
+                <div class="form-checkbox"><input type="checkbox" name="member" id="chevytahoe" value="chevytahoe" /><label for="chevytahoe"><img src="images/chevy_tahoe.png" alt="Chevy Tahoe"/></label></div>
+                <div class="form-checkbox"><input type="checkbox" name="member" id="dodgecharger" value="dodgecharger" /><label for="dodgecharger"><img src="images/dodge_charger.png" alt="Dodge Charger"/></label></div>
+                <div class="form-checkbox"><input type="checkbox" name="member" id="fordraptor" value="fordraptor" /><label for="fordraptor"><img src="images/ford_raptor.png" alt="Ford Raptor"/></label></div>
+                <div class="form-checkbox"><input type="checkbox" name="member" id="dodgeram" value="dodgeram" /><label for="dodgeram"><img src="images/dodge_ram.png" alt="Dodge Ram"/></label></div>
+                <div class="form-checkbox"><input type="checkbox" name="member" id="fordmustang" value="fordmustang" /><label for="fordmustang"><img src="images/ford_mustang.png" alt="Ford Mustang"/></label></div>
+                <div class="form-checkbox"><input type="checkbox" name="member" id="shelbygt500" value="shelbygt500" /><label for="shelbygt500"><img src="images/shelby_gt500.png" alt="Shelby GT500"/></label></div>
+
+            <input type="submit" value="submit" />
+                    
