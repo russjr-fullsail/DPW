@@ -15,7 +15,7 @@ class Page():
     </head>
     <body>
     <header>
-		<h1>Please Select Vehicle"></h1>
+		<h1>Please Select your Favorite Vehicles (up to five please)</h1>
 	</header>
        '''
 		self.registration = form = '''
@@ -60,32 +60,20 @@ class Page():
             </select>
             <select name="bmonth">
 				<option value="na">Month</option>
-				<option value="jan">January</option>
-				<option value="feb">Febrauary</option>
-				<option value="march">March</option>
-				<option value="april">April</option>
-				<option value="may">May</option>
-				<option value="june">June</option>
-				<option value="july">July</option>
-				<option value="august">August</option>
-				<option value="sept">September</option>
-				<option value="oct">October</option>
-				<option value="nov">November</option>
-				<option value="dec">December</option>
+				<option value="January">January</option>
+				<option value="February">Febrauary</option>
+				<option value="March">March</option>
+				<option value="April">April</option>
+				<option value="May">May</option>
+				<option value="June">June</option>
+				<option value="July">July</option>
+				<option value="August">August</option>
+				<option value="September">September</option>
+				<option value="October">October</option>
+				<option value="November">November</option>
+				<option value="December">December</option>
 			</select>
 			<select name="byear">
-				<option value="na">Year</option>
-				<option value="2009">2009</option>
-				<option value="2008">2008</option>
-				<option value="2007">2007</option>
-				<option value="2006">2006</option>
-				<option value="2005">2005</option>
-				<option value="2004">2004</option>
-				<option value="2003">2003</option>
-				<option value="2002">2002</option>
-				<option value="2001">2001</option>
-				<option value="2000">2000</option>
-				<option value="1999">1999</option>
 				<option value="1998">1998</option>
 				<option value="1997">1997</option>
 				<option value="1996">1996</option>
@@ -126,7 +114,7 @@ class Page():
 
             <label for="member">Please vote for your favorite vehicle</label>
 
-                <div class="form-checkbox"><input type="checkbox" name="member" id="jeep" value=" Jeep" /><label for="jeep"><img src="images/jeep.png" alt="Jeep Rubicon"/></label></div>
+                <div class="form-checkbox"><input type="checkbox" name="member" id="jeep" value=" 2014 Jeep Rubicon" /><label for="jeep"><img src="images/jeep.png" alt="Jeep Rubicon"/></label></div>
                 <div class="form-checkbox"><input type="checkbox" name="member" id="1963chevytruck" value=" 1963 Chevy Truck" /><label for="1963chevytruck"><img src="images/1963_chevy_truck.png" alt="1963 Chevy Truck"/></label></div>
                 <div class="form-checkbox"><input type="checkbox" name="member" id="1968shelbycobra" value=" 1968 Shelby Cobra" /><label for="1968shelbycobra"><img src="images/1968_shelby_cobra.png" alt="1968 Shelby Cobra"/></label></div>
                 <div class="form-checkbox"><input type="checkbox" name="member" id="1970oldsmobile442" value=" 1970 Oldsmobile 442" /><label for="1970oldsmobile442"><img src="images/1970_oldsmobile_442.png" alt="1070 Oldsmobile 442"/></label></div>
@@ -135,8 +123,6 @@ class Page():
                 <div class="form-checkbox"><input type="checkbox" name="member" id="chevytahoe" value=" 2015 Chevy Tahoe" /><label for="chevytahoe"><img src="images/chevy_tahoe.png" alt="Chevy Tahoe"/></label></div>
                 <div class="form-checkbox"><input type="checkbox" name="member" id="dodgecharger" value=" 2014 Dodge Charger" /><label for="dodgecharger"><img src="images/dodge_charger.png" alt="Dodge Charger"/></label></div>
                 <div class="form-checkbox"><input type="checkbox" name="member" id="fordraptor" value=" 2011 Ford Raptor" /><label for="fordraptor"><img src="images/ford_raptor.png" alt="Ford Raptor"/></label></div>
-                <div class="form-checkbox"><input type="checkbox" name="member" id="dodgeram" value=" 2014 Dodge Ram" /><label for="dodgeram"><img src="images/dodge_ram.png" alt="Dodge Ram"/></label></div>
-                <div class="form-checkbox"><input type="checkbox" name="member" id="fordmustang" value="2014 Ford Mustang" /><label for="fordmustang"><img src="images/ford_mustang.png" alt="Ford Mustang"/></label></div>
                 <div class="form-checkbox"><input type="checkbox" name="member" id="shelbygt500" value=" 2014 Shelby GT500" /><label for="shelbygt500"><img src="images/shelby_gt500.png" alt="Shelby GT500"/></label></div>
 
             <input type="submit" value="submit" />
