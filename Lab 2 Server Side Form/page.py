@@ -61,3 +61,5 @@ def __init__(self):
             <div id="radio">
             <input type="radio" name="sex" value="male" id="male">
             <label for="male">Male</label>
+            <input type="radio" name="sex" value="female" id="female">
+            <label for="female">Female</label>
