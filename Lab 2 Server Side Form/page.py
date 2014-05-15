@@ -59,7 +59,12 @@ def __init__(self):
             </select>
             <label> Sex: </label>
             <div id="radio">
-            <input type="radio" name="sex" value="male" id="male">
-            <label for="male">Male</label>
-            <input type="radio" name="sex" value="female" id="female">
-            <label for="female">Female</label>
+                <input type="radio" name="sex" value="male" id="male">
+                <label for="male">Male</label>
+                <input type="radio" name="sex" value="female" id="female">
+                <label for="female">Female</label>
+            </div>
+
+            <label for="member">Please vote for your favorite vehicle</label>
+
+            <div class="form-checkbox"><input type="checkbox" name="member" id="jeep" value="jeep" /><label for="jeep"><img src="images/jeep.png" alt="Jeep Rubicon"/></label></div>
