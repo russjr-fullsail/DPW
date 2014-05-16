@@ -71,7 +71,14 @@ class MainHandler(webapp2.RequestHandler):
         movies = [self.epiv, self.epv, self.epvi, self.epi, self.epii, self.epiii]
         print movies
 
-        
+        self.response.write(page.header + page.links)
+        if self.request.GET:
+            movie = int(self.request.GET['movie'])
+
+            title = movies[movie].title
+            ustheater = movies[movie].ustheater
+            wwtheater = movies[movie].wwtheater
+            total_sales = movies[movie].total_sales
 
 
 
