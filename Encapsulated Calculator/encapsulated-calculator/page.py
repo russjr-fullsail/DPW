@@ -31,4 +31,12 @@ class Page():
         <footer>
             <p>Copyright &copy; 2014 <strong>Star Wars Movie Sales</strong>. Figures of money made taken from <a href="http://www.the-numbers.com/movies/franchise/Star-Wars" target="_blank">The Numbers</a></p>
     </html>'''
-        
+
+    def header(self):
+        return self.header
+
+    def links(self):
+        return self.links
+
+    def footer(self):
+        return self.footer
