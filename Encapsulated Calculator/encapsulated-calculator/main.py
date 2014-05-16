@@ -92,13 +92,29 @@ class MainHandler(webapp2.RequestHandler):
 			        <p class="stats">{wwtheater}</p>
 			    </section>
 		    </div>'''
+            info = info.format(**locals())
 
+            self.response.write(page.footer)
 
+# Data-Object Class
+class Movie(object):
+    def __init__(self):
+        self.title = ""
+        self.ustheater = 0
+        self.wwtheater = 0
+        self.__total_sales = 0
 
+    @property
+    def total_sales(self):
+        return self.__total_sales
 
+    @total_sales.setter #setter
+    def total_sales(self, sales):
+        self.__total_sales = sales
 
-
-
+    def calc_total_sales(self):
+        total = self.ustheater + self.wwtheater
+        self.__total_sales = total
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
