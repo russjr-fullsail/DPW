@@ -24,3 +24,9 @@ class Page():
 		<a href="?movie=4" class="links">Star Wars - Episode II - Attack of the Clones (2002)</a>
         <a href="?movie=5" class="links">Star Wars - Episode III - Revenge of the Sith (2005)</a>
 		<a href="?movie=6" class="links">Star Wars - The Clone Wars (2008)</a>
+
+        self.footer = '''
+        </body>
+
+        <footer>
+            
