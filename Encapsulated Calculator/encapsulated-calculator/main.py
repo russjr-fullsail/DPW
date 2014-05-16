@@ -80,6 +80,14 @@ class MainHandler(webapp2.RequestHandler):
             wwtheater = movies[movie].wwtheater
             total_sales = movies[movie].total_sales
 
+            info='''<div id="info">
+			<h3>{title}</h3>
+				<section id="sales">
+					<p class="labels"><strong>US Theater Sales</strong></p>
+					<p class="labels"><strong>Worldwide Theater Sales</strong></p>
+				</section>
+
+
 
 
 
