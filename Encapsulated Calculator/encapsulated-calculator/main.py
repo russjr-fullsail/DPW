@@ -20,8 +20,15 @@ class MainHandler(webapp2.RequestHandler):
         self.epiv.calc_total_sales()
         print "The total number of ticket sales for " +self.epiv.title+ " is " +str(self.epiv.total_sales)
 
-        
+        #Star Wars Episode V (1980)
+        self.epv = Movie()
+        self.epv.title = "Star Wars Episode V"
+        self.epv.ustheater = 290271960
+        self.epv.wwtheater = 534171960
+        self.epv.calc_total_sales()
+        print "The total number of ticket sales for " +self.epv.title+ " is " +str(self.epv.total_sales)
 
+        
 
 
 
