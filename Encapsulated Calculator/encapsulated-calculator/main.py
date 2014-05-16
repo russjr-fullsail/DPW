@@ -68,7 +68,7 @@ class MainHandler(webapp2.RequestHandler):
         self.clone.calc_total_sales()
         print "The total number of ticket sales for " +self.clone.title+ " is " +str(self.clone.total_sales)
 
-        movies = [self.epiv, self.epv, self.epvi, self.epi, self.epii, self.epiii]
+        movies = [self.epiv, self.epv, self.epvi, self.epi, self.epii, self.epiii, self.clone]
         print movies
 
         self.response.write(page.header + page.links)
@@ -85,15 +85,18 @@ class MainHandler(webapp2.RequestHandler):
 				<section id="sales">
 					<p class="labels"><strong>US Theater Sales</strong></p>
 					<p class="labels"><strong>Worldwide Theater Sales</strong></p>
+					<p class="labels"><strong>Total sales:</strong></p>
 				</section>
 
 			    <section id="numbers">
 			        <p class="stats">{ustheater}</p>
 			        <p class="stats">{wwtheater}</p>
+			        <p class="stats">{total_sales}</p>
 			    </section>
 		    </div>'''
             info = info.format(**locals())
 
+            self.response.write(info)
             self.response.write(page.footer)
 
 # Data-Object Class

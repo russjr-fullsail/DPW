@@ -1,0 +1,111 @@
+/* --------------- Main --------------- */
+body {
+	background-color: rgba(247, 218, 255, 0);
+	font-family: 'helvetica', sans-serif;
+	font-size: 11pt;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1, h3 {
+	font-family: 'helvetica', cursive;
+}
+
+h1 {
+	font-size: 24pt;
+	color: #363636;
+	margin-bottom: 3%;
+}
+
+h3 {
+	font-size: 15pt;
+	color: #5e815b;
+}
+
+#container {
+	margin: 0 auto;
+	width: 960px;
+}
+
+.links {
+	margin-right: 1%;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #60ad5c;
+	padding: 2px 4px;
+	background: -moz-linear-gradient(
+		top,
+		#ebebeb 0%,
+		#ffffff 50%,
+		#d1d1d1);
+	background: -webkit-gradient(
+		linear, left top, left bottom,
+		from(#ebebeb),
+		color-stop(0.50, #ffffff),
+		to(#d1d1d1));
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #616161;
+	-moz-box-shadow:
+		0px 1px 3px rgba(000,000,000,0),
+		inset 0px 0px 3px rgba(235,235,235,1);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(000,000,000,0),
+		inset 0px 0px 3px rgba(235,235,235,1);
+	box-shadow:
+		0px 1px 3px rgba(000,000,000,0),
+		inset 0px 0px 3px rgba(235,235,235,1);
+	text-shadow:
+		0px -1px 0px rgba(184,184,184,0.2),
+		0px 1px 0px rgba(255,255,255,1);
+}
+
+footer {
+	margin-top: 2%;
+	overflow: hidden;
+	clear: both;
+}
+
+footer p {
+	color: rgba(0, 0, 0, 0.98);
+}
+
+/* --------------- Movie Information --------------- */
+#info h2 {
+	margin-top: 3%;
+}
+#info p {
+	overflow: hidden;
+}
+
+#sales {
+	float: left;
+	clear: left;
+	width: 30%;
+}
+
+#numbers {
+	margin-left: 1%;
+	float:left;
+	width: 30%;
+}
+
+.labels {
+	margin-bottom: 1%;
+	float: left;
+	clear: left;
+	color: #363636;
+}
+
+.stats {
+	margin-bottom: 1%;
+	float: left;
+	clear: left;
+	text-align: left;
+	font-style: oblique;
+	color: #767676;
+}
