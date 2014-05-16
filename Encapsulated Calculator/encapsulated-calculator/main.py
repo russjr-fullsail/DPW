@@ -60,6 +60,14 @@ class MainHandler(webapp2.RequestHandler):
         self.epiii.calc_total_sales()
         print "The total number of ticket sales for " +self.epiii.title+ " is " +str(self.epiii.total_sales)
 
+        #Star Wars Clone Wars (2008)
+        self.clone = Movie()
+        self.clone.title = "Star Wars Episode II"
+        self.clone.ustheater = 35161554
+        self.clone.wwtheater = 68161554
+        self.clone.calc_total_sales()
+        print "The total number of ticket sales for " +self.clone.title+ " is " +str(self.clone.total_sales)
+
         
 
 
