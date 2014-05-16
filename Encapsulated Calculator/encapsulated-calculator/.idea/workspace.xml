@@ -26,7 +26,7 @@
       <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="82" selection-start="3236" selection-end="3236" vertical-scroll-proportion="0.86" vertical-offset="645" max-vertical-offset="1575">
+            <state line="93" column="21" selection-start="3404" selection-end="3404" vertical-scroll-proportion="0.96" vertical-offset="675" max-vertical-offset="1665">
               <folding>
                 <element signature="e#64#78#0" expanded="true" />
               </folding>
@@ -58,7 +58,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="634" />
+    <option name="x" value="546" />
     <option name="y" value="22" />
     <option name="width" value="779" />
     <option name="height" value="860" />
@@ -330,7 +330,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="634" y="22" width="779" height="860" extended-state="0" />
+    <frame x="546" y="22" width="779" height="860" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -379,7 +379,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="82" selection-start="3236" selection-end="3236" vertical-scroll-proportion="0.86" vertical-offset="645" max-vertical-offset="1575">
+        <state line="93" column="21" selection-start="3404" selection-end="3404" vertical-scroll-proportion="0.96" vertical-offset="675" max-vertical-offset="1665">
           <folding>
             <element signature="e#64#78#0" expanded="true" />
           </folding>

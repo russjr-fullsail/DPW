@@ -87,6 +87,12 @@ class MainHandler(webapp2.RequestHandler):
 					<p class="labels"><strong>Worldwide Theater Sales</strong></p>
 				</section>
 
+			    <section id="numbers">
+			        <p class="stats">{ustheater}</p>
+			        <p class="stats">{wwtheater}</p>
+			    </section>
+		    </div>'''
+
 
 
 
