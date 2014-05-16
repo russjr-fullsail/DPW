@@ -68,6 +68,9 @@ class MainHandler(webapp2.RequestHandler):
         self.clone.calc_total_sales()
         print "The total number of ticket sales for " +self.clone.title+ " is " +str(self.clone.total_sales)
 
+        movies = [self.epiv, self.epv, self.epvi, self.epi, self.epii, self.epiii]
+        print movies
+
         
 
 
