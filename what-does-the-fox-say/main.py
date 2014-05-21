@@ -14,6 +14,14 @@ class MainHandler(webapp2.RequestHandler):
         page.method= 'GET'
         page.update()
 
+        # Lion
+        lion = Sound()
+        lion.name = 'Panthera Leo'
+        lion.phylum = 'Chordata'
+        lion.class = 'Mammalia'
+        lion.order = 'Carnivore'
+        lion.family = ''
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
