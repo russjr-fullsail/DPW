@@ -8,7 +8,11 @@ import webapp2
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello world!')
+        page = Form()
+        page.title = "What Does the Fox Say"
+        page.css = '<link href="css/main.css" rel="stylesheet" type="text/css">'
+        page.method= 'GET'
+        page.update()
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
