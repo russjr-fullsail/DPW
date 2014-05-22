@@ -16,7 +16,7 @@ class MainHandler(webapp2.RequestHandler):
 
         # Lion
         lion = Sound()
-        lion.name = 'African lion'
+        lion.name = 'African Lion'
         lion.phylum = 'Chordata'
         lion.classs = 'Mammalia'
         lion.order = 'Carnivore'
@@ -29,6 +29,22 @@ class MainHandler(webapp2.RequestHandler):
         lion.geolocation = 'sub-Saharian'
         lion.sound = 'Rawr Rawr'
         lion.update()
+
+        # seal
+        seal = Sound()
+        seal.name = 'Grey Seal'
+        seal.phylum = 'Chordata'
+        seal.classs = 'Mammalia'
+        seal.order = 'Carnivore'
+        seal.family = 'Phocidae'
+        seal.genus = 'Halichoerus'
+        seal.species = 'Halichoerus grypus'
+        seal.img = 'http://animaldiversity.ummz.umich.edu/accounts/Halichoerus_grypus/pictures/collections/contributors/Grzimek_mammals/Phocidae/Halichoerus_grypus_male'
+        seal.lifespan = '15 to 25'
+        seal.habitat = 'temperate; polar; terrestrial; saltwater or marine'
+        seal.geolocation = 'temperate and subartic waters'
+        seal.sound = ''
+        seal.update()
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
