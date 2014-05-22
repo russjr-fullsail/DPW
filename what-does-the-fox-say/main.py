@@ -62,6 +62,15 @@ class MainHandler(webapp2.RequestHandler):
         fox.sound = 'yit yit'
         fox.update()
 
+        anim = [lion, seal, fox]
+
+        self.response.write(page.header)
+        self.response.write(page.getForm)
+        if self.request.GET:
+            button = int(self.request.GET['animal'])
+            self.response.write(self.html(anim[button]))
+        self.response.write(page.closer)
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
