@@ -28,15 +28,17 @@ class MainHandler(webapp2.RequestHandler):
             #parse xml
             xmldoc = minidom.parse(result)
             self.response.write(xmldoc.getElementsByTagName('title')[2].firstChild.nodeValue)
-            self.content = ''
+            self.content = '</br>'
             list = xmldoc.getElementsByTagName("yweather:forecast")
             for item in list:
                 self.content += item.attributes['day'].value
+                self.content += "   HIGH: "+item.attributes['high'].value
+                self.content += "   LOW: "+item.attributes['low'].value
+                self.content += "   CONDITION: "+item.attributes['text'].value
+                self.content += '<img src="images/'+item.attributes['code'].value+'.png" width="30" />'
                 self.content += '</br>'
 
             self.response.write(self.content)
-
-
 
 class Page(object): #borrowing stuff form the object class
     def __init__(self):
