@@ -141,6 +141,25 @@ class MainHandler(webapp2.RequestHandler):
     def update(self):
         self._header = self._header.format(**locals())
 
+class Form(PageBase):
+    def __init__(self):
+        super(Form, self).__init__() #super --> calling PageBase's init
+
+        self.method = "POST"
+        self.action = ''
+
+        self.__formOpen = '''
+        <form action="{self.action}" method="{self.method}" name="foxSay" id="buttons">
+            <a href="/?animal=0" name="animal" id="lion">African Lion</a>
+            <a href="/?animal=1" name="animal" id="seal">Gray Seal</a>
+            <a href="/?animal=2" name="animal" id="fox">Red Fox</a>
+        </form>
+        '''
+
+        self.__formClose = '''
+        </form>
+        '''
+
 
 
 app = webapp2.WSGIApplication([
