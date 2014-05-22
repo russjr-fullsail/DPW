@@ -80,6 +80,34 @@ class MainHandler(webapp2.RequestHandler):
         <ul>
             <li>
                 <p>Phylum: {obj.phylum}</p>
+            </li>
+            <li>
+                <p>Class: {obj.classs}</p>
+            </li>
+            <li>
+                <p>Order: {obj.order}</p>
+            </li>
+            <li>
+                <p>Family: {obj.family}</p>
+            </li>
+            <li>
+                <p>Genus: {obj.genus}</p>
+            </li>
+            <li>
+                <p>Species: {obj.species}</p>
+            </li>
+            <li>
+                <p>Lifespan: {obj.lifespan}</p>
+            </li>
+            <li>
+                <p>Habitat: {obj.habitat}</p>
+            </li>
+            <li>
+                <p>Geolocation: {obj.geolocation}</p>
+            </li>
+        </ul>
+    </div>
+        '''
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
