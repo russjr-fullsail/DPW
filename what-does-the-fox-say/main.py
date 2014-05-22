@@ -16,11 +16,13 @@ class MainHandler(webapp2.RequestHandler):
 
         # Lion
         lion = Sound()
-        lion.name = 'Panthera Leo'
+        lion.name = 'African lion'
         lion.phylum = 'Chordata'
         lion.class = 'Mammalia'
         lion.order = 'Carnivore'
-        lion.family = ''
+        lion.family = 'Felidae'
+        lion.genus = 'Panthera'
+        lion.species = 'Panthera Leo'
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
