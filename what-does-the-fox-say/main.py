@@ -25,7 +25,7 @@ class MainHandler(webapp2.RequestHandler):
         lion.species = 'Panthera Leo'
         lion.img = 'http://animaldiversity.ummz.umich.edu/accounts/Panthera_leo/pictures/collections/contributors/kay_holekamp/PrideofLions9_91'
         lion.lifespan = '14'
-        lion.habitat = 'temperate; tropical and terrestrial'
+        lion.habitat = 'temperate, tropical and terrestrial'
         lion.geolocation = 'sub-Saharian'
         lion.sound = 'Rawr'
         lion.update()
@@ -41,10 +41,26 @@ class MainHandler(webapp2.RequestHandler):
         seal.species = 'Halichoerus grypus'
         seal.img = 'http://animaldiversity.ummz.umich.edu/accounts/Halichoerus_grypus/pictures/collections/contributors/Grzimek_mammals/Phocidae/Halichoerus_grypus_male'
         seal.lifespan = '15 to 25'
-        seal.habitat = 'temperate; polar; terrestrial; saltwater or marine'
+        seal.habitat = 'temperate, polar, terrestrial, saltwater or marine'
         seal.geolocation = 'temperate and subartic waters'
         seal.sound = 'arr arr arr'
         seal.update()
+
+        # fox
+        fox = Sound()
+        fox.name = 'Red Fox'
+        fox.phylum = 'Chordata'
+        fox.classs = 'Mammalia'
+        fox.order = 'Carnivore'
+        fox.family = 'Canidae'
+        fox.genus = 'Vulpes'
+        fox.species = 'Vulpes vulpes'
+        fox.img = 'http://animaldiversity.ummz.umich.edu/accounts/Vulpes_vulpes/pictures/collections/contributors/phil_myers/ADW_mammals/Carnivora/Canidae/foxes1412'
+        fox.lifespan = '12'
+        fox.habitat = 'temperate, terrestrial'
+        fox.geolocation = 'desert or dune, savanna, forest, mountains'
+        fox.sound = 'yit yit'
+        fox.update()
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
