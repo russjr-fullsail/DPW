@@ -130,7 +130,18 @@ class MainHandler(webapp2.RequestHandler):
     </html>
             '''
 
-        
+    @property
+    def header(self):
+        return self._header
+
+    @property
+    def closer(self):
+        return self.__closer
+
+    def update(self):
+        self._header = self._header.format(**locals())
+
+
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
