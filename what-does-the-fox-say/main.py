@@ -24,7 +24,11 @@ class MainHandler(webapp2.RequestHandler):
         lion.genus = 'Panthera'
         lion.species = 'Panthera Leo'
         lion.img = 'http://animaldiversity.ummz.umich.edu/accounts/Panthera_leo/pictures/collections/contributors/kay_holekamp/PrideofLions9_91'
-        
+        lion.lifespan = '14'
+        lion.habitat = 'temperate; tropical and terrestrial'
+        lion.geolocation = 'sub-Saharian'
+        lion.sound = 'Rawr Rawr'
+        lion.update()
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
