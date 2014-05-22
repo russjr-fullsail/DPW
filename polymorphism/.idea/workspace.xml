@@ -26,7 +26,7 @@
       <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="7" selection-start="48" selection-end="48" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1200">
+            <state line="4" column="7" selection-start="48" selection-end="48" vertical-scroll-proportion="-0.44954127" vertical-offset="403" max-vertical-offset="1200">
               <folding />
             </state>
           </provider>
@@ -78,7 +78,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -99,6 +98,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -205,6 +205,13 @@
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="7" selection-start="48" selection-end="48" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1200">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="7" selection-start="48" selection-end="48" vertical-scroll-proportion="-0.44954127" vertical-offset="403" max-vertical-offset="1200">
           <folding />
         </state>
       </provider>
