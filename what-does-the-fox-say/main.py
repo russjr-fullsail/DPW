@@ -168,6 +168,21 @@ class Form(PageBase):
         self._header = self._header.format(**locals())
         self.__formOpen = self.__formOpen.format(**locals())
 
+class Animal(object):
+    def __init__(self):
+        self._name = ''
+        self.phylum = ''
+        self.classs = ''
+        self.order = ''
+        self.family = ''
+        self.genus = ''
+        self.species = ''
+        self.img = ''
+        self.lifespan = ''
+        self.habitat = ''
+        self.geolocation = ''
+        self.sound = ''
+
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
