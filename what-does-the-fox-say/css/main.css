@@ -16,7 +16,7 @@ body{
     border-bottom-right-radius: 5px;
 }
 h2{
-    font: helvetica;
+    font: helvetica, Arial;
     text-align:center;
     margin-bottom: 0;
 }
@@ -61,6 +61,6 @@ ul li{
 }
 #sound{
     text-align: center;
-    font-type: Helvetica;
+    font-type: Helvetica, Arial;
     font-size: 18px;
 }
