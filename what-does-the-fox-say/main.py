@@ -27,7 +27,7 @@ class MainHandler(webapp2.RequestHandler):
         lion.lifespan = '14'
         lion.habitat = 'temperate; tropical and terrestrial'
         lion.geolocation = 'sub-Saharian'
-        lion.sound = 'Rawr Rawr'
+        lion.sound = 'Rawr'
         lion.update()
 
         # seal
@@ -43,7 +43,7 @@ class MainHandler(webapp2.RequestHandler):
         seal.lifespan = '15 to 25'
         seal.habitat = 'temperate; polar; terrestrial; saltwater or marine'
         seal.geolocation = 'temperate and subartic waters'
-        seal.sound = ''
+        seal.sound = 'arr arr arr'
         seal.update()
 
 app = webapp2.WSGIApplication([
