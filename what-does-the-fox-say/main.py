@@ -71,6 +71,16 @@ class MainHandler(webapp2.RequestHandler):
             self.response.write(self.html(anim[button]))
         self.response.write(page.closer)
 
+    def html(selfself,obj):
+        result ='''
+    <div id="result">
+        <h2>{obj.name}</h2>
+        {obj.soundPass}
+        <img src={obj.img} alt="{obj.name}" height="320"
+        <ul>
+            <li>
+                <p>Phylum: {obj.phylum}</p>
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
