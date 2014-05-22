@@ -4,6 +4,7 @@ DPW
 What Does The Fox Say
 5/21/14
 '''
+
 import webapp2
 
 class MainHandler(webapp2.RequestHandler):
@@ -11,10 +12,10 @@ class MainHandler(webapp2.RequestHandler):
         page = Form()
         page.title = "What Does the Fox Say"
         page.css = '<link href="css/main.css" rel="stylesheet" type="text/css">'
-        page.method= 'GET'
+        page.method = 'GET'
         page.update()
 
-        # Lion
+        # Lion class that gets all the attributes from the Animals class
         lion = Sound()
         lion.name = 'African Lion'
         lion.phylum = 'Chordata'
@@ -23,14 +24,14 @@ class MainHandler(webapp2.RequestHandler):
         lion.family = 'Felidae'
         lion.genus = 'Panthera'
         lion.species = 'Panthera Leo'
-        lion.img = 'http://animaldiversity.ummz.umich.edu/accounts/Panthera_leo/pictures/collections/contributors/christopher_jameson/panthera_leo_9/'
+        lion.img = 'http://animaldiversity.ummz.umich.edu/collections/contributors/christopher_jameson/panthera_leo_9/large.jpg'
         lion.lifespan = '14'
         lion.habitat = 'temperate, tropical and terrestrial'
         lion.geolocation = 'sub-Saharian'
         lion.sound = 'Rawr'
         lion.update()
 
-        # seal
+        # seal class that gets all the attributes from the Animals class
         seal = Sound()
         seal.name = 'Gray Seal'
         seal.phylum = 'Chordata'
@@ -39,14 +40,14 @@ class MainHandler(webapp2.RequestHandler):
         seal.family = 'Phocidae'
         seal.genus = 'Halichoerus'
         seal.species = 'Halichoerus grypus'
-        seal.img = 'http://animaldiversity.ummz.umich.edu/accounts/Halichoerus_grypus/pictures/collections/contributors/Grzimek_mammals/Phocidae/Halichoerus_grypus_male/'
+        seal.img = 'http://animaldiversity.ummz.umich.edu/collections/contributors/tanya_dewey/grayseal/large.jpg'
         seal.lifespan = '15 to 25'
         seal.habitat = 'temperate, polar, terrestrial, saltwater or marine'
         seal.geolocation = 'temperate and subartic waters'
         seal.sound = 'arr arr arr'
         seal.update()
 
-        # fox
+        # fox class that gets all the attributes from the Animals class
         fox = Sound()
         fox.name = 'Red Fox'
         fox.phylum = 'Chordata'
@@ -55,13 +56,14 @@ class MainHandler(webapp2.RequestHandler):
         fox.family = 'Canidae'
         fox.genus = 'Vulpes'
         fox.species = 'Vulpes vulpes'
-        fox.img = 'http://animaldiversity.ummz.umich.edu/accounts/Vulpes_vulpes/pictures/collections/contributors/phil_myers/ADW_mammals/Carnivora/Canidae/fox1374/'
+        fox.img = 'http://animaldiversity.ummz.umich.edu/collections/contributors/phil_myers/ADW_mammals/Carnivora/Canidae/fox1374/large.jpg'
         fox.lifespan = '12'
         fox.habitat = 'temperate, terrestrial'
         fox.geolocation = 'desert or dune, savanna, forest, mountains'
         fox.sound = 'yit yit'
         fox.update()
 
+        #Array with all the animals in it
         anim = [lion, seal, fox]
 
         self.response.write(page.header)
@@ -71,12 +73,12 @@ class MainHandler(webapp2.RequestHandler):
             self.response.write(self.html(anim[button]))
         self.response.write(page.closer)
 
-    def html(selfself,obj):
-        result ='''
+    def html(self, obj):
+        result = '''
     <div id="result">
         <h2>{obj.name}</h2>
         {obj.soundPass}
-        <img src={obj.img} alt="{obj.name}" height="320"
+        <img src={obj.img} alt="{obj.name}" height="300">
         <ul>
             <li>
                 <p>Phylum: {obj.phylum}</p>
@@ -97,7 +99,7 @@ class MainHandler(webapp2.RequestHandler):
                 <p>Species: {obj.species}</p>
             </li>
             <li>
-                <p>Lifespan: {obj.lifespan}</p>
+                <p>Lifespan: {obj.lifespan} years</p>
             </li>
             <li>
                 <p>Habitat: {obj.habitat}</p>
@@ -108,27 +110,27 @@ class MainHandler(webapp2.RequestHandler):
         </ul>
     </div>
         '''
-        result = result.form(**locals())
+        result = result.format(**locals())
         return result
 
-    class PageBase(object):
-        def __init__(self):
-            self.title = ""
-            self.css = ''
+class PageBase(object):
+    def __init__(self):
+        self.title = ""
+        self.css = ''
 
-            self.header = '''
-    <!DOCTYPE>
-    <html>
-        <head>
-            <title>{self.title}</title>
-            {self.css}
-        </head>
-        <body>
-            '''
-            self.__closer = '''
-        </body>
-    </html>
-            '''
+        self._header = '''
+<!DOCTYPE>
+<html>
+    <head>
+        <title>{self.title}</title>
+        {self.css}
+    </head>
+    <body>
+        '''
+        self.__closer = '''
+    </body>
+</html>
+        '''
 
     @property
     def header(self):
@@ -168,6 +170,7 @@ class Form(PageBase):
         self._header = self._header.format(**locals())
         self.__formOpen = self.__formOpen.format(**locals())
 
+#Sets the original class where the smaller classes take note from
 class Animal(object):
     def __init__(self):
         self._name = ''
@@ -183,6 +186,24 @@ class Animal(object):
         self.geolocation = ''
         self.sound = ''
 
+        @property
+        def Name(self):
+            return self._name
+
+class Sound(Animal): # makes a class Sound that is part of the Animal class
+    def __init__(self):
+        super(Sound, self).__init__()
+
+        self.__soundP = '''
+        <p id="sound">The {self.name} says {self.sound}</p>
+    '''
+
+    @property
+    def soundPass(self):
+        return self.__soundP
+
+    def update(self):
+        self.__soundP = self.__soundP.format(**locals())
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
