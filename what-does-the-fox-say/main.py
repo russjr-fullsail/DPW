@@ -18,7 +18,7 @@ class MainHandler(webapp2.RequestHandler):
         lion = Sound()
         lion.name = 'African lion'
         lion.phylum = 'Chordata'
-        lion.class = 'Mammalia'
+        lion.classs = 'Mammalia'
         lion.order = 'Carnivore'
         lion.family = 'Felidae'
         lion.genus = 'Panthera'
