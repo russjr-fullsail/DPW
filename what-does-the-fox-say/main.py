@@ -160,6 +160,13 @@ class Form(PageBase):
         </form>
         '''
 
+    @property
+    def getForm(self):
+        return self.__formOpen + self.__formClose
+
+    def update(self):
+        self._header = self._header.format(**locals())
+        self.__formOpen = self.__formOpen.format(**locals())
 
 
 app = webapp2.WSGIApplication([
