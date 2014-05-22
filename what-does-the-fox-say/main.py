@@ -23,6 +23,8 @@ class MainHandler(webapp2.RequestHandler):
         lion.family = 'Felidae'
         lion.genus = 'Panthera'
         lion.species = 'Panthera Leo'
+        lion.img = 'http://animaldiversity.ummz.umich.edu/accounts/Panthera_leo/pictures/collections/contributors/kay_holekamp/PrideofLions9_91'
+        
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
