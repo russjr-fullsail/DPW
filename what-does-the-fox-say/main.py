@@ -108,6 +108,29 @@ class MainHandler(webapp2.RequestHandler):
         </ul>
     </div>
         '''
+        result = result.form(**locals())
+        return result
+
+    class PageBase(object):
+        def __init__(self):
+            self.title = ""
+            self.css = ''
+
+            self.header = '''
+    <!DOCTYPE>
+    <html>
+        <head>
+            <title>{self.title}</title>
+            {self.css}
+        </head>
+        <body>
+            '''
+            self.__closer = '''
+        </body>
+    </html>
+            '''
+
+        
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
