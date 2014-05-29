@@ -37,11 +37,16 @@ class MainHandler(webapp2.RequestHandler):#controller class that is collecting a
                 self._content += '<p><ul><li><a href="' + do.for_sale + '">For Sale</a></li><li><a href="' + do.owner_sale + '">For Sale by Owner</a></li><a href="' + do.foreclosure + '">Foreclosure</a></li></p>'
 
 
+        @property
+        def content(self):
+            return self._content
+
+        @property
+        def housedo(self):
+            pass
 
 
 
-class MainHandler(webapp2.RequestHandler):
-    def get(self):
 
 
 app = webapp2.WSGIApplication([
