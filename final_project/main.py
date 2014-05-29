@@ -53,6 +53,11 @@ class HomeView(object): #this is what the user will view and shows the info from
 class homeModel(object): #the class for where the data is fetched, parsed and sorted from the Zillow API
     def __inti__(self):
         self._url = "http://www.zillow.com/static/xsd/SearchResults.xsd"
+        self.__city = ''
+        self.__state = ''
+        self.__xmldoc = ''
+
+
 
 
 
