@@ -26,6 +26,19 @@ class MainHandler(webapp2.RequestHandler):#controller class that is collecting a
 
         self.response.write(p.print_out())
 
+    class HouseView(object): #this is what the user will view and shows the info from the API call
+        def __init__(self):
+            self._housedo = []
+            self._content = '</br>'
+
+        def update(self):
+            for do in self._housedo:
+                self._content += "<p>Showing home information in: </br>" + do.city + ", " + do.state + "</p>"
+                self._content += '<p><ul><li><a href="' + do.for_sale + '">For Sale</a></li><li><a href="' + do.owner_sale + '">For Sale by Owner</a></li><a href="' + do.foreclosure + '">Foreclosure</a></li></p>'
+
+
+
+
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
