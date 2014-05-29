@@ -57,6 +57,11 @@ class homeModel(object): #the class for where the data is fetched, parsed and so
         self.__state = ''
         self.__xmldoc = ''
 
+    def callApi(self): #puts request together
+        request = urllib2.Request(self._url + self._state + "&city=" + self._city)
+
+        #
+
 
 
 
