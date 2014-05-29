@@ -15,24 +15,24 @@ class MainHandler(webapp2.RequestHandler):#controller class that is collecting a
 
         if self.request.GET: #will only work if city and state are in url
             #gets the info from the API and creates the model
-            hm = HouseModel()
+            hm = HomeModel()
             hm.city = self.request.GET['city']
             hm.state = self.request.GET['state']
             hm.callApi()
             #takes the data from model class and sends it to the view class
-            hv = HouseView()
-            hv.housedo = hm.houses
+            hv = HomeView()
+            hv.homedo = hm.homes
             p._body = hv.content
 
         self.response.write(p.print_out())
 
-    class HouseView(object): #this is what the user will view and shows the info from the API call
+    class HomeView(object): #this is what the user will view and shows the info from the API call
         def __init__(self):
-            self._housedo = []
+            self._homedo = []
             self._content = '</br>'
 
         def update(self):
-            for do in self._housedo:
+            for do in self._homedo:
                 self._content += "<p>Showing home information in: </br>" + do.city + ", " + do.state + "</p>"
                 self._content += '<p><ul><li><a href="' + do.for_sale + '">For Sale</a></li><li><a href="' + do.owner_sale + '">For Sale by Owner</a></li><a href="' + do.foreclosure + '">Foreclosure</a></li></p>'
 
@@ -42,7 +42,7 @@ class MainHandler(webapp2.RequestHandler):#controller class that is collecting a
             return self._content
 
         @property
-        def housedo(self):
+        def homedo(self):
             pass
 
 
