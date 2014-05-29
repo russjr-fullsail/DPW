@@ -26,24 +26,33 @@ class MainHandler(webapp2.RequestHandler):#controller class that is collecting a
 
         self.response.write(p.print_out())
 
-    class HomeView(object): #this is what the user will view and shows the info from the API call
-        def __init__(self):
-            self._homedo = []
-            self._content = '</br>'
+class HomeView(object): #this is what the user will view and shows the info from the API call
+    def __init__(self):
+        self._homedo = []
+        self._content = '</br>'
 
-        def update(self):
-            for do in self._homedo:
-                self._content += "<p>Showing home information in: </br>" + do.city + ", " + do.state + "</p>"
-                self._content += '<p><ul><li><a href="' + do.for_sale + '">For Sale</a></li><li><a href="' + do.owner_sale + '">For Sale by Owner</a></li><a href="' + do.foreclosure + '">Foreclosure</a></li></p>'
+    def update(self):
+        for do in self._homedo:
+            self._content += "<p>Showing home information in: </br>" + do.city + ", " + do.state + "</p>"
+            self._content += '<p><ul><li><a href="' + do.for_sale + '">For Sale</a></li><li><a href="' + do.owner_sale + '">For Sale by Owner</a></li><a href="' + do.foreclosure + '">Foreclosure</a></li></p>'
 
 
-        @property
-        def content(self):
-            return self._content
+    @property
+    def content(self):
+        return self._content
 
-        @property
-        def homedo(self):
-            pass
+    @property
+    def homedo(self):
+        pass
+
+    @homedo.setter
+    def homedo(self, arr):
+        self._homedo = arr
+        self.update()
+
+class homeModel(object): #the class for where the data is fetched, parsed and sorted from the Zillow API
+    def __inti__(self):
+        self._url = "http://www.zillow.com/static/xsd/SearchResults.xsd"
 
 
 
