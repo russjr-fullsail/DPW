@@ -140,6 +140,9 @@ class Page(object):
     </body>
 </html>'''
 
+    def print_out(self):
+        return self._head + self._body + self._close
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
