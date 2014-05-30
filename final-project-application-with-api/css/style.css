@@ -1,7 +1,17 @@
-body{
+html{
     background-color: #ffffff;
     width: auto;
     margin: 10px;
     border: 2px solid black;
     border-radius: 15px;
+}
+
+.display {
+    background-color: lightsteelblue;
+	width: auto;
+	margin: 0 auto;
+	padding: 5px;
+	border: 2px solid black;
+	border-radius: 15px;
+	text-align: center;
 }
