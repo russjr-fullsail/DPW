@@ -15,3 +15,10 @@ html{
 	border-radius: 15px;
 	text-align: center;
 }
+
+h1{
+    background-image: url('/img/header_image.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 150px;
+}
