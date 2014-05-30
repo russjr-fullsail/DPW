@@ -53,6 +53,40 @@ class HomeView(object):
         self.__home = arr
         self.update()
 
+class HomeModel(object):
+    '''the class that is where the data is fetched, parsed and sorted from the Zillow API'''
+    def __init__(self):
+        self.__url = "http://www.zillow.com/webservice/GetDemographics.htm?zws-id=X1-ZWz1du3zc6q5mz_8tgid&state="
+        self.__city = ''
+        self.__state = ''
+        self.__xmldoc = ''
+
+    def callApi(self):
+        #this is used to assemble the request
+        request = urllib2.Request(self.__url + self.__state + "&city=" + self.__city)
+
+        #use the urllib2 library to create an object to get the url
+        opener = urllib2.build_opener()
+
+        #use the url to get a result - requesting info from the API
+        result = opener.open(request)
+
+        #parse the XML
+        self.__xmldoc = minidom.parse(result)
+
+        self._homes = []
+        home = HomeData()
+        home.city = self.__xmldoc.getElementsByTagName('city')[1].firstChild.nodeValue
+        home.state = self.__xmldoc.getElementsByTagName('state')[1].firstChild.nodeValue
+        home.for_sale = self.__xmldoc.getElementsByTagName('forSale')[0].firstChild.nodeValue
+        home.owner_sale = self.__xmldoc.getElementsByTagName('forSaleByOwner')[0].firstChild.nodeValue
+        home.foreclosure = self.__xmldoc.getElementsByTagName('foreclosures')[0].firstChild.nodeValue
+        home.recently_sold = self.__xmldoc.getElementsByTagName('recentlySold')[0].firstChild.nodeValue
+        home.affordability = self.__xmldoc.getElementsByTagName('affordability')[0].firstChild.nodeValue
+        home.home_value = self.__xmldoc.getElementsByTagName('value')[2].firstChild.nodeValue
+        home.property_tax = self.__xmldoc.getElementsByTagName('value')[26].firstChild.nodeValue
+        self._homes.append(home)
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
