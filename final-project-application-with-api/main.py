@@ -151,6 +151,24 @@ class FormPage(Page):
         self.__inputs = []
         self._form_inputs = ''
 
+    @property
+    def inputs(self):
+        pass
+
+    @inputs.setter
+    def inputs(self, arr):
+        self.__inputs = arr
+        for item in arr:
+            self._form_inputs += '<input type="' + item[1] + '" name="' + item[0]
+            try:
+                self._form_inputs += '" placeholder="' + item[2]+'" />'
+            except:
+                self._form_inputs += '" />'
+
+    def print_out(self):
+        return self._head + "<h3>Please enter city and state to start your search</h3>" + self._form_open + self._form_inputs + self._form_close + self._body +  self._close
+
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
