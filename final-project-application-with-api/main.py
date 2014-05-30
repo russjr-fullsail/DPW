@@ -107,6 +107,19 @@ class HomeModel(object):
     def state(self, s):
         self.__state = s
 
+class homeData(object):
+    '''this holds the data that is fetched from the model class and is what the view class will show'''
+    def __init__(self):
+        self.city = ''
+        self.state = ''
+        self.for_sale = ''
+        self.owner_sale = ''
+        self.foreclosure = ''
+        self.recently_sold = ''
+        self.affordability = ''
+        self.home_value = ''
+        self.property_tax = ''
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
