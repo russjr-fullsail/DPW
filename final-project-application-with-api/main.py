@@ -29,6 +29,12 @@ class MainHandler(webapp2.RequestHandler):
 
         self.response.write(p.print_out())
 
+class HomeView(object):
+    '''this class shows info from the API call'''
+    def __init__(self):
+        self.__home = []
+        self.__content = '<br/>'
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
