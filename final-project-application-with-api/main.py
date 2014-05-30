@@ -120,6 +120,26 @@ class homeData(object):
         self.home_value = ''
         self.property_tax = ''
 
+class Page(object):
+    '''the class that holds the main page info and skeleton'''
+    def __init__(self):
+        self._head = '''
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Find Your Next Home</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1></h1>
+        <div class="display">'''
+
+        self._body = ''
+        self._close = '''
+        </div
+    </body>
+</html>'''
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
