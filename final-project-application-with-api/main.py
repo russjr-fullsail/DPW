@@ -17,7 +17,7 @@ class MainHandler(webapp2.RequestHandler):
 
         if self.request.GET: #will only work if city and State are in URL
             #get info from API and creates model
-            hm = HomeMode()
+            hm = HomeModel()
             hm.city = self.request.GET['city']
             hm.state = self.request.GET['state']
             hm.callApi()
@@ -40,7 +40,7 @@ class HomeView(object):
             self.__content += "<p>Please choose a category to see homes for: <br/> " + do.city + ", " + do.state + "</p>"
             self.__content += '<p><ul><li><a href="' + do.for_sale + '">For Sale</a></li><li><a href="' + do.owner_sale + '">For Sale By Owner</a></li><li><a href="' + do.foreclosure + '">Foreclosures</a></li><li><a href="' + do.recently_sold + '">Recently Sold</a></li><li><a href="' + do.affordability + '">Area Affordability</a></li><p class="footer">Home Value In This Area: $' + do.home_value + '<br/>Property Tax In This Area: $' + do.property_tax + '</p>'
 
-     @property
+    @property
     def content(self):
         return self.__content
 
