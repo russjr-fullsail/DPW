@@ -90,6 +90,57 @@ class WeatherModel(object):
     def zip(self, z):
         self.__zip = z
 
+class WeatherData(object):
+    ''' This data object holds the data fetched by the model and shown by the view'''
+    def __init__(self):
+        self.day = ''
+        self.high = ''
+        self.low = ''
+        self.code = ''
+        self.condition = ''
+        self.date = ''
+
+class Page(object):
+    def __init__(self):
+        self._head = '''
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>'''
+        self._body = ''
+        self._close = '''
+    </body>
+</html>'''
+
+    def print_out(self):
+        return self._head + self._body + self._close
+
+class FormPage(Page):
+    def __init__(self):
+        super(FormPage, self).__init__()
+        self._form_open = '<form method="GET">'
+        self._form_close = '</form>'
+        self.__inputs = []
+        self._form_inputs = ''
+
+    @property
+    def inputs(self):
+        pass
+
+    @inputs.setter
+    def inputs(self, arr):
+        self.__inputs = arr
+        for item in arr:
+            self._form_inputs += '<input type="' + item[1] + '" name="' + item[0]
+            try:
+                self._form_inputs += '" placeholder="' + item[2] + '" required/>'
+
+            except:
+                self._form_inputs += '" />'
+
+    def print_out(self):
+        return self._head + "Weather App" + self._form_open + self._form_inputs + self._form_close + self._body + self._close
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
