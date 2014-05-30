@@ -10,6 +10,9 @@ from xml.dom import minidom
 
 class MainHandler(webapp2.RequestHandler):
     '''class controller for collecting and sending info from the view to model class'''
+    def get(self):
+        p = FormPage()
+        p.inputs = [['city', 'text', 'City'],['state', 'text', 'State'],['submit', 'Submit']]
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
