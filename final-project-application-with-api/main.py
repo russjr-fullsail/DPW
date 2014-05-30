@@ -87,6 +87,26 @@ class HomeModel(object):
         home.property_tax = self.__xmldoc.getElementsByTagName('value')[26].firstChild.nodeValue
         self._homes.append(home)
 
+    @property
+    def homes(self):
+        return self._homes
+
+    @property
+    def city(self):
+        pass
+
+    @property
+    def state(self):
+        pass
+
+    @city.setter
+    def city(self, c):
+        self.__city = c
+
+    @state.setter
+    def state(self, s):
+        self.__state = s
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
