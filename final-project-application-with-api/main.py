@@ -75,7 +75,7 @@ class HomeModel(object):
         self.__xmldoc = minidom.parse(result)
 
         self._homes = []
-        home = HomeData()
+        home = homeData()
         home.city = self.__xmldoc.getElementsByTagName('city')[1].firstChild.nodeValue
         home.state = self.__xmldoc.getElementsByTagName('state')[1].firstChild.nodeValue
         home.for_sale = self.__xmldoc.getElementsByTagName('forSale')[0].firstChild.nodeValue

@@ -35,7 +35,7 @@
       <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="26" selection-start="627" selection-end="627" vertical-scroll-proportion="0.17866667" vertical-offset="151" max-vertical-offset="2700">
+            <state line="77" column="23" selection-start="2793" selection-end="2793" vertical-scroll-proportion="0.296" vertical-offset="933" max-vertical-offset="2700">
               <folding>
                 <element signature="e#76#90#0" expanded="true" />
               </folding>
@@ -68,8 +68,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-4" />
-    <option name="y" value="51" />
+    <option name="x" value="-41" />
+    <option name="y" value="44" />
     <option name="width" value="700" />
     <option name="height" value="860" />
   </component>
@@ -314,7 +314,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="51" width="700" height="860" extended-state="0" />
+    <frame x="-41" y="44" width="700" height="860" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -370,7 +370,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="26" selection-start="627" selection-end="627" vertical-scroll-proportion="0.17866667" vertical-offset="151" max-vertical-offset="2700">
+        <state line="77" column="23" selection-start="2793" selection-end="2793" vertical-scroll-proportion="0.296" vertical-offset="933" max-vertical-offset="2700">
           <folding>
             <element signature="e#76#90#0" expanded="true" />
           </folding>
