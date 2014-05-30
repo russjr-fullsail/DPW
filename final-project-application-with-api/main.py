@@ -14,6 +14,13 @@ class MainHandler(webapp2.RequestHandler):
         p = FormPage()
         p.inputs = [['city', 'text', 'City'],['state', 'text', 'State'],['submit', 'Submit']]
 
+        if self.request.GET: #will only work if city and State are in URL
+            #get info from API and creates model
+            hm = HomeMode()
+            hm.city = self.request.GET['city']
+            hm.state = self.request.GET['state']
+            hm.callApi()
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
