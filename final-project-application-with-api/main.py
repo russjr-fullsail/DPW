@@ -135,9 +135,10 @@ class Page(object):
 
         self._body = ''
         self._close = '''
-        </div
+        </div>
 
         <a href="http://www.zillow.com/?scrnnm=russjr4"><img src="http://www.zillowstatic.com/static/images/badges/zillow-addict_bllg.gif" alt="Real Estate Addict at Zillow"></img></a>
+
     </body>
 </html>'''
 
