@@ -4,6 +4,7 @@ DPW
 Final Project Application with API
 5/29/14
 '''
+#I chose Zillow for my final project, I researched BingMaps, Trulia and Zillow.  Zillow seemed like the best choice, I found a lot of useful information on their site to help me along
 
 import webapp2
 import urllib2 #python classes and code needed to requesting info, receiving, and opening
@@ -13,9 +14,9 @@ class MainHandler(webapp2.RequestHandler):
     '''class controller for collecting and sending info from the view to model class'''
     def get(self):
         p = FormPage()
-        p.inputs = [['city', 'text', 'City'],['state', 'text', 'State'],['submit', 'Submit']]
+        p.inputs = [['city', 'text', 'Please Enter City'],['state', 'text', 'Please Enter State'],['Submit', 'submit']]
 
-        if self.request.GET: #will only work if city and State are in URL
+        if self.request.GET: #will only work if City and State are in URL
             #get info from API and creates model
             hm = HomeModel()
             hm.city = self.request.GET['city']
@@ -38,7 +39,7 @@ class HomeView(object):
     def update(self):
         for do in self.__home:
             self.__content += "<p>Please choose a category to see homes for: <br/> " + do.city + ", " + do.state + "</p>"
-            self.__content += '<p><ul><li><a href="' + do.for_sale + '">For Sale</a></li><li><a href="' + do.owner_sale + '">For Sale By Owner</a></li><li><a href="' + do.foreclosure + '">Foreclosures</a></li><li><a href="' + do.recently_sold + '">Recently Sold</a></li><li><a href="' + do.affordability + '">Area Affordability</a></li><p class="footer">Home Value In This Area: $' + do.home_value + '<br/>Property Tax In This Area: $' + do.property_tax + '</p>'
+            self.__content += '<p><ul><li><a href="' + do.for_sale + '">For Sale</a></li><li><a href="' + do.owner_sale + '">For Sale By Owner</a></li><li><a href="' + do.foreclosure + '">Foreclosures</a></li><li><a href="' + do.recently_sold + '">Recently Sold</a></li><li><p class="footer">Home Value In This Area: $' + do.home_value + '<br/>Property Tax In This Area: $' + do.property_tax + '</p>'
 
     @property
     def content(self):
@@ -82,7 +83,6 @@ class HomeModel(object):
         home.owner_sale = self.__xmldoc.getElementsByTagName('forSaleByOwner')[0].firstChild.nodeValue
         home.foreclosure = self.__xmldoc.getElementsByTagName('foreclosures')[0].firstChild.nodeValue
         home.recently_sold = self.__xmldoc.getElementsByTagName('recentlySold')[0].firstChild.nodeValue
-        home.affordability = self.__xmldoc.getElementsByTagName('affordability')[0].firstChild.nodeValue
         home.home_value = self.__xmldoc.getElementsByTagName('value')[2].firstChild.nodeValue
         home.property_tax = self.__xmldoc.getElementsByTagName('value')[26].firstChild.nodeValue
         self._homes.append(home)
@@ -116,7 +116,6 @@ class homeData(object):
         self.owner_sale = ''
         self.foreclosure = ''
         self.recently_sold = ''
-        self.affordability = ''
         self.home_value = ''
         self.property_tax = ''
 
@@ -132,11 +131,13 @@ class Page(object):
     </head>
     <body>
         <h1></h1>
-        <div class="display">'''
+        <div class="search">'''
 
         self._body = ''
         self._close = '''
         </div
+
+        <a href="http://www.zillow.com/?scrnnm=russjr4"><img src="http://www.zillowstatic.com/static/images/badges/zillow-addict_bllg.gif" alt="Real Estate Addict at Zillow"></img></a>
     </body>
 </html>'''
 

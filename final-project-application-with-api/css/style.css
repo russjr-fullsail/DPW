@@ -6,7 +6,7 @@ html{
     border-radius: 15px;
 }
 
-.display {
+.search {
     background-color: lightsteelblue;
 	width: auto;
 	margin: 0 auto;
@@ -21,4 +21,60 @@ h1{
     background-repeat: no-repeat;
     background-position: center;
     height: 150px;
+}
+
+input{
+    width: 200px;
+    height: 40px;
+    margin: 0px 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+input[type=submit]{
+    background-color: steelblue;
+    font-size: 18px;
+    font-family: 'helvetica', sans-serif;
+    font-weight: bold;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+
+a:link {
+	color: black;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #ff0000;
+	text-decoration: none;
+}
+
+a:active {
+	color: black;
+	text-decoration: none;
+}
+
+ul {
+	margin-top: 5px;
+}
+
+
+ul li {
+	list-style: none;
+	width: auto;
+	margin: 0px 10px;
+	display: inline-table;
+	padding: 5px;
+}
+
+.footer {
+	margin-bottom: 5px;
 }
