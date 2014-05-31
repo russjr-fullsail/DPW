@@ -14,7 +14,7 @@ class MainHandler(webapp2.RequestHandler):
     '''class controller for collecting and sending info from the view to model class'''
     def get(self):
         p = FormPage()
-        p.inputs = [['city', 'text', 'Please Enter City'],['state', 'text', 'Please Enter State'],['Submit', 'submit']]
+        p.inputs = [['city', 'text', 'Please Enter City'],['state', 'text', 'Please Enter State'], ['Submit', 'submit']]
 
         if self.request.GET: #will only work if City and State are in URL
             #get info from API and creates model
@@ -50,8 +50,8 @@ class HomeView(object):
         pass
 
     @home.setter
-    def home(self, arr):
-        self.__home = arr
+    def home(self, dhs):
+        self.__home = dhs
         self.update()
 
 class HomeModel(object):
@@ -158,9 +158,9 @@ class FormPage(Page):
         pass
 
     @inputs.setter
-    def inputs(self, arr):
-        self.__inputs = arr
-        for item in arr:
+    def inputs(self, dhs):
+        self.__inputs = dhs
+        for item in dhs:
             self._form_inputs += '<input type="' + item[1] + '" name="' + item[0]
             try:
                 self._form_inputs += '" placeholder="' + item[2]+'" />'
